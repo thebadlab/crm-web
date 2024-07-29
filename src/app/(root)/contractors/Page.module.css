@@ -1,0 +1,11 @@
+.Page {
+  height: 2000px;
+}
+
+.PagePagination {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}

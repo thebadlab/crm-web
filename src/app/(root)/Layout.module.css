@@ -1,0 +1,79 @@
+.Main {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.MainTe {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.MainMain {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.PageHeader {
+  z-index: 15;
+}
+
+.PageHeaderWrapper {
+  z-index: 10;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  border-bottom: 1px solid;
+}
+
+.PageHeaderContainer {
+  width: 100%;
+}
+
+.PageHeaderContent {
+  position: relative;
+  z-index: 15;
+  display: flex;
+  width: 100%;
+  flex-shrink: 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 8px;
+  row-gap: 16px;
+  padding: 14px;
+}
+
+.PageWrapper {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: #e9e9e9;
+}
+
+.PageContainer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+/* space-y-8 md:p-7 p-3 bg-custom-background-90  */
+.PageContent {
+  padding: 28px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}

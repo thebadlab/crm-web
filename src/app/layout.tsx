@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import style from './Layout.module.css';
+import '~/assets/css/index.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -10,7 +12,9 @@ export default function AppLayout({
 }>) {
   return (
     <html lang="ru">
-      <body className={inter.className}>{children}</body>
+      <body className={style.Main} style={inter.style}>
+        {children}
+      </body>
     </html>
   );
 }

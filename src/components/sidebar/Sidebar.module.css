@@ -1,0 +1,55 @@
+.Sidebar {
+  position: relative;
+  top: 0px;
+  bottom: 0px;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 250px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border-right: 1px solid;
+  border-color: rgb(0 0 0);
+  background-color: #fff;
+  transition-duration: 300ms;
+}
+
+.SidebarContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0%;
+  padding: 14px;
+  padding-bottom: 0px;
+}
+
+.Logo {
+}
+
+.Buttons {
+  display: flex;
+  column-gap: 14px;
+}
+
+.SearchButton {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  height: 32px;
+  background-color: #ccc;
+  padding-left: 12px;
+  padding-right: 12px;
+  border: 0.5px solid;
+}
+
+/* !overflow-y-scroll -mr-3 -ml-4 pl-4 */
+.SidebarNav {
+  height: 100%;
+  margin-right: -12px;
+  margin-left: -16px;
+  padding-left: 16px;
+}
