@@ -1,6 +1,10 @@
+import { getResponse } from '~/libs/api';
 import style from './Page.module.css';
+import ObjectListProvider from '~/components/object/ObjectListContext';
+import ObjectList from '~/components/object/ObjectList';
 
-export default function ObjectListPage() {
+export default async function ObjectListPage() {
+  const posts = await getResponse();
   const currentHour = new Date().getHours();
 
   return (
@@ -18,7 +22,9 @@ export default function ObjectListPage() {
         <div>Object List Page</div>
       </div>
 
-      <div>List</div>
+      <ObjectListProvider objects={posts}>
+        <ObjectList />
+      </ObjectListProvider>
 
       <div className={style.PagePagination}>
         <div className={''}>Pagination</div>

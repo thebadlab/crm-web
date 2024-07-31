@@ -2,6 +2,30 @@ import Link from 'next/link';
 import classNames from 'classnames';
 import style from './Sidebar.module.css';
 import MainActionButton from '../main-action-button/MainActionButton';
+import Menu from './Menu';
+import MenuLink from './MenuLink';
+
+const MENU: Array<{
+  title: string;
+  path: string;
+}> = [
+  {
+    title: 'Главная',
+    path: '/',
+  },
+  {
+    title: 'Объекты',
+    path: '/objects',
+  },
+  {
+    title: 'Контрагенты',
+    path: '/contractors',
+  },
+  {
+    title: 'Пользователи',
+    path: '/users',
+  },
+];
 
 export default function Sidebar() {
   return (
@@ -19,20 +43,11 @@ export default function Sidebar() {
             'vertical-scrollbar scrollbar-sm',
           )}
         >
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <Link href="/" className="">
-              Главная
-            </Link>
-            <Link href="/objects" className="">
-              Объекты
-            </Link>
-            <Link href="/contractors" className="">
-              Контрагенты
-            </Link>
-            <Link href="/users" className="">
-              Пользователи
-            </Link>
-          </div>
+          <Menu>
+            {MENU.map((item) => (
+              <MenuLink key={item.path} {...item} />
+            ))}
+          </Menu>
         </div>
 
         <div className="">
