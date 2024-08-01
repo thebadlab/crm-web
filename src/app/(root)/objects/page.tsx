@@ -1,7 +1,7 @@
 import { getResponse } from '~/libs/api';
 import style from './Page.module.css';
-import ObjectListProvider from '~/components/object/ObjectListContext';
-import ObjectList from '~/components/object/ObjectList';
+import { ObjectList } from './components/ObjectList';
+import SortProducts from '~/components/Test';
 
 export default async function ObjectListPage() {
   const posts = await getResponse();
@@ -10,21 +10,11 @@ export default async function ObjectListPage() {
   return (
     <div>
       <div>
-        <div>
-          {currentHour >= 6 && currentHour < 12 ? (
-            <>Доброе утро</>
-          ) : currentHour >= 12 && currentHour < 18 ? (
-            <>Добрый день</>
-          ) : (
-            <>Добрый вечер</>
-          )}
-        </div>
+        <SortProducts />
         <div>Object List Page</div>
       </div>
 
-      <ObjectListProvider objects={posts}>
-        <ObjectList />
-      </ObjectListProvider>
+      <ObjectList objects={posts} />
 
       <div className={style.PagePagination}>
         <div className={''}>Pagination</div>
