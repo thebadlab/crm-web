@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prepare": "husky"
+    "prepare": "husky",
+    "mock-server": "npx mock-config-server"
   },
   "dependencies": {
     "classnames": "^2.5.1",
@@ -23,6 +24,7 @@
     "eslint-config-next": "14.2.5",
     "husky": "^9.1.3",
     "lint-staged": "^15.2.7",
+    "mock-config-server": "^3.6.0",
     "prettier": "^3.3.3",
     "typescript": "^5"
   },

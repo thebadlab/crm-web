@@ -1,8 +1,9 @@
-import { getResponse } from '~/libs/api';
 import style from './Page.module.css';
+import UserCard from './components/UserCard';
 
 export default async function UserListPage() {
-  const posts = await getResponse();
+  const response = await fetch('http://localhost:31299/api/users');
+  const users = await response.json();
 
   return (
     <div>
@@ -12,8 +13,8 @@ export default async function UserListPage() {
       </div>
 
       <div>
-        {posts.map((post: any) => (
-          <div key={post.id}>{post.id}</div>
+        {users.map((user: any) => (
+          <UserCard key={user.id} {...user} />
         ))}
       </div>
 
